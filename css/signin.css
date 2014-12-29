@@ -132,6 +132,14 @@ input:-moz-placeholder {
     margin:0 auto;
 }
 
+span {
+ text-align:center;
+ text-decoration:none;
+ letter-spacing:2px;
+ font-size:10px;
+ color:#8a0808;
+}
+
 
 
 
