@@ -127,17 +127,9 @@ input:-moz-placeholder {
 .logo {
     background:url(../img/logo.png) no-repeat center center ;
     background-size:100%;
-    width:100px;
-    height:100px;
-    margin:0 auto;
-}
-
-span {
- text-align:center;
- text-decoration:none;
- letter-spacing:2px;
- font-size:10px;
- color:#8a0808;
+    width:80px;
+    height:87px;
+    margin:10px auto;
 }
 
 
