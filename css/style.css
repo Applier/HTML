@@ -386,3 +386,31 @@ select {
     background-position: center right;
     background-repeat: no-repeat;
 }
+
+button {
+	width:200px;
+	height:40px;
+	background:#8a0808;
+	border-radius:2px;
+	box-shadow:0 2px 0 0 #690707;
+	padding-top:5px;
+	font-size:14px;
+	color:#fff;
+	border:0;
+	text-shadow:0 2px 0 #690707;
+	filter:dropshadow(color=#690707,offx=0,offy=2);
+	margin-top:30px;
+	margin-bottom: 20px;
+	font-weight: bold;
+    font-family: Open Sans, sans-serif;
+}
+
+button:hover {
+	background-color:#c50f0f;
+	transition:.9s;
+	cursor:pointer;
+}
+
+button:active {
+	background: #dd6e62;
+}
