@@ -111,6 +111,14 @@ input:focus {
 	margin-bottom:30px;
 }
 
+.erreur {
+	text-align:center;
+	text-decoration:none;
+	letter-spacing:2px;	
+	font-size:10px;
+	color:#8a0808;
+}
+
 ::-webkit-input-placeholder { 
 	color:#d4d4d4;; 
 }
@@ -131,11 +139,3 @@ input:-moz-placeholder {
     height:87px;
     margin:10px auto;
 }
-
-
-
-
-
-
-
-
