@@ -5,8 +5,27 @@
         <meta charset="utf-8">
         <link rel='stylesheet' type='text/css' href='css/style.css'/>
         <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
-       <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
+        <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        
+        <script type="text/javascript">
+	       function toggleSibling(sibling){
+		      sibling = sibling.nextSibling;
+		          while(!/tr/i.test(sibling.nodeName)){
+			         sibling = sibling.nextSibling;
+		          }
+		      sibling.style.display = sibling.style.display == 'table-row' ? 'none' : 'table-row';
+	       }
+            
+            <!--
+                function popitup(url) {
+	               newwindow=window.open(url,'name','height=300,width=500');
+	               if (window.focus) {newwindow.focus()}
+	               return false;
+                }
+            // -->
+	   </script>
+
     </head>
     <body>
         <div class="wrapper clearfix">
@@ -26,7 +45,8 @@
             </thead>
 
             <tbody>
-                <tr class="ligne">
+                <tr class="ligne" onclick="toggleSibling(this)">
+                                       
                     <td class="col-4">
                         <p class="text-normal">Stagiaire Développeur Web</p>
                     </td>
@@ -39,7 +59,33 @@
                         <p class="text-normal"><strong>31 Déc. 2014</strong></p>     
                     </td>
                 </tr>
-                <tr class="ligne">
+                <tr class='details1'>
+                    <td colspan="7"><p>
+                    De formation BTS ou DUT, vous justifiez d'une expérience de 1 à 2 ans sur un poste similaire ou d'une formation en alternance.           
+                    <h2> Tâches </h2>   
+                    <table class="taches">
+                        <thead>
+                            <tr>
+                                <th>Tâche</th>
+                                <th>Date limite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr classe="ligne">
+                            <td>Répondre au dernier mail </td>
+                            <td>18 déc. 2014 </td>
+                        </tr>
+                        <tr classe="ligne">
+                            <td class="col-4">Créer CV</td>
+                            <td class="col-4">20 Déc. 2014</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                        <a href="../index/ajouter.html" onclick="return popitup('ajouter.html')"><button>Ajouter une tâche</button></a>
+
+                    </p>
+                </tr>
+                <tr class="ligne" onclick="toggleSibling(this)">
                     <td class="col-4">
                         <p class="text-normal">Stagiaire Chef de Projet</p>
                     </td>
@@ -52,7 +98,32 @@
                         <p class="text-normal"><strong>02 Jan. 2014</strong></p>     
                     </td>
                 </tr>
-                <tr class="ligne">
+            <tr class='details1'>
+                    <td colspan="7"><p>
+                    De formation BTS ou DUT, vous justifiez d'une expérience de 1 à 2 ans sur un poste similaire ou d'une formation en alternance.           
+                    <h2> Tâches </h2>   
+                    <table class="taches">
+                        <thead>
+                            <tr>
+                                <th>Tâche</th>
+                                <th>Date limite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr classe="ligne">
+                            <td>Répondre au dernier mail </td>
+                            <td>18 déc. 2014 </td>
+                        </tr>
+                        <tr classe="ligne">
+                            <td class="col-4">Créer CV</td>
+                            <td class="col-4">20 Déc. 2014</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                        <a href="../index/ajouter.html" onclick="return popitup('ajouter.html')"><button>Ajouter une tâche</button></a>
+                    </p>
+                </tr>
+                <tr class="ligne" onclick="toggleSibling(this)">
                     <td class="col-4">
                         <p class="text-normal">Stagiaire Développeur JEE</p>
                     </td>
@@ -64,6 +135,31 @@
                     <td class="col-4">
                         <p class="text-normal"><strong>11 Jan. 2014</strong></p>     
                     </td>
+                </tr>
+                <tr class='details1'>
+                    <td colspan="7"><p>
+                    De formation BTS ou DUT, vous justifiez d'une expérience de 1 à 2 ans sur un poste similaire ou d'une formation en alternance.           
+                    <h2> Tâches </h2>   
+                    <table class="taches">
+                        <thead>
+                            <tr>
+                                <th>Tâche</th>
+                                <th>Date limite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr classe="ligne">
+                            <td>Répondre au dernier mail </td>
+                            <td>18 déc. 2014 </td>
+                        </tr>
+                        <tr classe="ligne">
+                            <td class="col-4">Créer CV</td>
+                            <td class="col-4">20 Déc. 2014</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                        <a href="../index/ajouter.html" onclick="return popitup('ajouter.html')"><button>Ajouter une tâche</button></a>
+                    </p>
                 </tr>
             </tbody>
            </table>
@@ -82,7 +178,7 @@
             <hr>
             <p>Etudiante en deuxième année à l'ENSEEIHT,  Toulouse, France.</p>
             <p>21 ans <br>
-            <a style="color:#8a0808" href="/applier/signout">Se déconnecter</a></p>
+            <a style="color:#8a0808" href="/index.html">Se déconnecter</a></p>
 
           </div>
           <div class="button-container">

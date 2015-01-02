@@ -21,6 +21,7 @@ h1 {
 }
 
 h2 {
+    font-size: 12px;
     font-family:Open Sans, sans-serif;
     color:#8a0808;
 }
@@ -262,11 +263,9 @@ tr {
     color:#8a0808;
 }
 
-
 th
 {
     color:rgba(0,0,0,.4);
-    width: 5%;
     text-align: left;
 	padding: 10px 8px;
 }
@@ -297,7 +296,7 @@ td
     margin : 0;
 }
 
-.ligne:hover 
+.ligne:hover
 {
 	color: #fff;
     background-color: #8a0808;
@@ -310,9 +309,24 @@ td
     transition: all .4s ease-in;
 }
 
+.ligne:hover label
+{
+	color: #fff;
+}
+
 tbody tr:hover td
 {
 	color: #8a0808;
+}
+
+table th.icon {
+    width : 2px;
+    margin : 0;
+}
+
+table td.icone {
+    width : 2px;
+    margin : 0;
 }
 
 input {
@@ -339,10 +353,12 @@ input:focus {
 }
 
 label {
-    color:rgba(0,0,0,.4);
-    width: 5%;
+    color:#8a0808;
     text-align: left;
     margin:15px 10px 0 0;
+    font-family: Open Sans,sans-serif;
+    font-size:18px;
+    font-weight: 200;
 }
 
 .long input {
@@ -411,6 +427,82 @@ button:hover {
 	cursor:pointer;
 }
 
-button:active {
-	background: #dd6e62;
+
+
+.derouler { position: relative; }
+
+input[type=checkbox] {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
 }
+
+.derouler label {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  padding-left: 30px;
+}
+.derouler label:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 10px;
+  border-left: 8px solid grey;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-top: -13px;
+}
+
+.derouler:focus ~ h2 label:before {
+  border-left: 8px solid transparent;
+  border-top: 8px solid grey;
+  border-right: 8px solid transparent;
+  margin-left: -4px;
+  margin-top: -4px
+}
+
+.details1 {
+    display: none;
+}
+
+.details1 p {
+    color: grey
+    text-align:center;
+}
+
+.details1 h2 {
+    color: #8a0808;
+    font-size : 18px;
+    font-weight: 800;
+    margin: 5px;
+}
+
+hr {
+    border : 0;
+    background-color : #8a0808;
+    color : #8a0808;
+    height : 1px;
+    width : 55px;
+}
+
+.taches {
+    margin-top:10px;
+}
+
+.taches td {
+    color: #8a0808;
+}
+
+.details1 button {
+	width:150px;
+    margin-bottom: 10px;
+    float:right;
+    display: inline-block;
+}
+
