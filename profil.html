@@ -6,6 +6,21 @@
         <link rel='stylesheet' type='text/css' href='css/style.css'/>
         <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script language="javascript"> 
+            function add_fields1() {
+            var objTo = document.getElementById('infos1')
+            var divtest = document.createElement("div");
+            divtest.innerHTML = '<label>De</label> <input type="date" placeholder="Date début"/> <label>à</label> <input type="date" placeholder="Date fin"/> <div class="long"> <input type="text" placeholder="Nom de l établissement"/> <input type="text" placeholder="Résumé"/></div>';
+            objTo.appendChild(divtest)
+            }
+            
+            function add_fields2() {
+            var objTo = document.getElementById('infos2')
+            var divtest = document.createElement("div");
+            divtest.innerHTML = '<label>De</label> <input type="date" placeholder="Date début"/> <label>à</label> <input type="date" placeholder="Date fin"/> <div class="long"> <input type="text" placeholder="Nom de l établissement"/> <input type="text" placeholder="Résumé"/></div>';
+            objTo.appendChild(divtest)
+            }  
+        </script>
     </head>
     <body>
         <div class="wrapper clearfix">
@@ -15,6 +30,7 @@
           <div class="title">
             <div class="profil"></div><h1 style="font-color:#8a0808">Mon profil</h1>
           </div>
+
         <form>
             <label>Votre nom</label>
             <input type="text" placeholder="Nom"/>
@@ -35,23 +51,27 @@
             <br/>
             <label>Votre parcours scolaire</label>
             <br/>
-            <label>De</label>
+            <div id="infos1">
+            <label>De</label>  
             <input type="date" placeholder="Date début"/>
             <label>à</label>
             <input type="date" placeholder="Date fin"/>
             <div class="long">
             <input type="text" placeholder="Nom de l'établissement"/>
-            <input type="text" placeholder="Résumé"/></div>
+            <input type="text" placeholder="Résumé"/></div></div>
+            <input type="button" id="more_fields1" onclick="add_fields1();" value="Ajouter" style="color:#fff;background-color:#8a0808;margin-bottom:10px;"/>
             <br/>
             <label>Vos expériences</label>
             <br/>
+            <div id="infos2">
             <label>De</label>
             <input type="date" placeholder="Date début"/>
             <label>à</label>
             <input type="date" placeholder="Date fin"/>
             <div class="long">
             <input type="text" placeholder="Nom de l'établissement"/>
-            <input type="text" placeholder="Résumé"/></div>
+                <input type="text" placeholder="Résumé"/></div></div>
+            <input type="button" id="more_fields2" onclick="add_fields2();" value="Ajouter" style="color:#fff;background-color:#8a0808;margin-bottom:10px;"/>
             <br/>
             <label>Vos compétences</label>
             <br/>
@@ -90,7 +110,7 @@
                 <ul class="boutons">
                         <a href="../index/index.html"><li> Voir mes offres </li></a><br>
                         <a href="../index/profil.html"><li> Modifier mon profil </li></a><br>
-                        <a href=""><li> Voir mes correspondances </li></a><br>
+                        <a href="../index/correspondances.html"><li> Voir mes correspondances </li></a><br>
                         <a href=""><li> Créer mon CV </li></a>
                 </ul>
           </div>
