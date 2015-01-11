@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Applier.</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Loubna Rizqi">
+        <link rel='stylesheet' type='text/css' href='css/style.css'/>
+        <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
+        <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        
+        <script type="text/javascript">
+	       function toggleSibling(sibling){
+		      sibling = sibling.nextSibling;
+		          while(!/tr/i.test(sibling.nodeName)){
+			         sibling = sibling.nextSibling;
+		          }
+		      sibling.style.display = sibling.style.display == 'table-row' ? 'none' : 'table-row';
+	       }
+            
+            <!--
+                function popitup(url) {
+	               newwindow=window.open(url,'name','height=300,width=500');
+	               if (window.focus) {newwindow.focus()}
+	               return false;
+                }
+            // -->
+	   </script>
+
+    </head>
+    <body>
+        <div class="wrapper clearfix">
+            <div class="right">
+
+        <div class="corps animated fadeInLeft">
+          <div class="title">
+            <div class="offre"></div><h1 style="font-color:#8a0808">Mes correspondances</h1>
+          </div>
+           <table>
+            <thead>
+                <tr>
+                    <th>Intitulé<span class="sort-direction"></span></th>
+                    <th>Entreprise<span class="sort-direction"></span></th>
+                    <th>Messages<span class="sort-direction"></span></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr class="ligne" onclick="toggleSibling(this)">
+                                       
+                    <td class="col-4">
+                        <p class="text-normal">Stagiaire Développeur Web</p>
+                    </td>
+
+                    <td class="col-4">
+                        <p class="text-normal"><strong>Sopra</strong></p>     
+                    </td>
+
+                    <td class="col-4">
+                        <p class="text-normal"><strong>3</strong></p>     
+                    </td>
+                </tr>
+                <tr class='details1'>
+                    <td colspan="7"><h2> Message du 21 novembre 2014, moi : </h2> 
+                        <p>
+                    Bonjour,
+                    <br>
+                       J'ai appris que vous êtiez à la recherche d'un stagiaire développeur web et je souhaite vous envoyer ma candidature pour cette offre. Je suis étudiante en deuxième année à l'ENSEEIHT en informatique et en mathématiques appliquées et je suis très intéressée par le développement web. Vous trouverez ci-joints un CV et une lettre de motivation.
+                    <br>
+                       Merci de votre attention.
+                    <br>
+                       Cordialement,
+                    <br>
+                       Loubna Rizqi</p>
+                    <h2> Message du 22 novembre 2014, Sopra : </h2> <p>
+                        Bonjour,
+                        <br>
+                           Nous avons bien reçu votre candidature. Nous reviendrons vers vous si votre profil correspond à nos critères.
+                        Merci de considérer une carrière chez Sopra.
+                        <br>
+                           Cordialement,
+                        <br>
+                        H. M.</p>
+                    <h2> Message du 28 novembre 2014, Sopra : </h2> <p>
+                        Bonjour,
+                        <br>
+                           Nous avons étudié votre candidature et nous voudrions vous rencontrer. Quand seriez-vous disponible pour un entretien dans nos locaux?
+                        <br>
+                        Cordialement,
+                        <br>
+                        H. M.</p>
+                        <a href="../index/ajouter.html" onclick="return popitup('message.html')"><button>Ajouter</button></a>
+                    
+                </tr>
+                <tr class="ligne" onclick="toggleSibling(this)">
+                    <td class="col-4">
+                        <p class="text-normal">Stagiaire Chef de Projet</p>
+                    </td>
+
+                    <td class="col-4">
+                        <p class="text-normal"><strong>Accenture</strong></p>     
+                    </td>
+
+                    <td class="col-4">
+                        <p class="text-normal"><strong>0</strong></p>     
+                    </td>
+                </tr>
+            <tr class='details1'>
+            </tr>
+                <tr class="ligne" onclick="toggleSibling(this)">
+                    <td class="col-4">
+                        <p class="text-normal">Stagiaire Développeur JEE</p>
+                    </td>
+
+                    <td class="col-4">
+                        <p class="text-normal"><strong>Unitag</strong></p>     
+                    </td>
+
+                    <td class="col-4">
+                        <p class="text-normal"><strong>0</strong></p>     
+                    </td>
+                </tr>
+                <tr class='details1'>
+                </tr>
+            </tbody>
+           </table>    
+        </div>
+
+      </div>
+      <div class="left">
+
+        <div class="presentation animated fadeIn">
+        <div class="logo"></div>
+        <div class="me-img"></div>
+
+          <div class="pres-text">
+
+            <h2>Loubna Rizqi</h2>
+            <hr>
+            <p>Etudiante en deuxième année à l'ENSEEIHT,  Toulouse, France.</p>
+            <p>21 ans <br>
+            <a style="color:#8a0808" href="../index/modifier-profil.html" onclick="return popitup('modifier-profil.html')">Modifier profil      </a> | <a style="color:#8a0808" href="/index.html">Se déconnecter</a></p>
+
+          </div>
+          <div class="button-container">
+                <ul class="boutons">
+                        <a href="../index/index.html"><li> Voir mes offres </li></a><br>
+                        <a href="../index/profil.html"><li> Modifier mon profil </li></a><br>
+                        <a href=""><li> Voir mes correspondances </li></a><br>
+                        <a href=""><li> Créer mon CV </li></a>
+                </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</body>
+</html>

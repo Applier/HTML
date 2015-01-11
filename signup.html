@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
         <head>
-                <meta charset="utf-8">
-                <title>S'inscrire</title>
-        <link rel='stylesheet' type='text/css' href='css/signin.css'/>
-        <script language="JavaScript">
+            <meta charset="utf-8">
+            <meta name="author" content="Loubna Rizqi">
+            <title>S'inscrire</title>
+            <link rel='stylesheet' type='text/css' href='css/signin.css'/>
+            <script language="JavaScript">
             function verifform()
             {
                 //Verifier qu'il y a bien un mail
@@ -58,7 +59,8 @@
                 //On enregistre le mot de passe...
                 var password = document.getElementById('password');
                 //On enregistre le message à afficher...
-                var message = document.getElementById('LengthMessage');
+                var message1 = document.getElementById('LengthMessage');
+                var message2 = document.getElementById('confirmMessage');
                 //On enregistre les couleurs pour les deux cas...
                 var goodColor = "#7dcd51";
                 var badColor = "#cd5151";
@@ -67,13 +69,26 @@
                 if(password.value.length >= 5){
                 //Le mot de passe est valide
                 password.style.backgroundColor = goodColor;
-                message.style.color = goodColor;
-                message.innerHTML = "Mot de passe valide."
+                message1.style.color = goodColor;
+                message1.innerHTML = "Mot de passe valide."
                 }else{
                 //Le mot de passe est trop court
                 password.style.backgroundColor = badColor;
-                message.style.color = badColor;
-                message.innerHTML = "Le mot de passe doit avoir au moins 5 caractères!"
+                message1.style.color = badColor;
+                message1.innerHTML = "Le mot de passe doit avoir au moins 5 caractères!"
+                }
+                if(password.value == confirmation.value){
+                //Ils sont identiques 
+                //Afficher le rouge et notifier l'utilisateur
+                confirmation.style.backgroundColor = goodColor;
+                message2.style.color = goodColor;
+                message2.innerHTML = "Mots de passe identiques."
+                }else{
+                //Les mots de passes sont différents
+                //Afficher le vert et notifier l'utilisateur
+                confirmation.style.backgroundColor = badColor;
+                message2.style.color = badColor;
+                message2.innerHTML = "Mots de passes différents!"
                 }
             }
         </script>
@@ -85,10 +100,10 @@
                 <input type="mail" name="mail" id="mail" placeholder="Email"/>
                 <input type="password" style="margin-left:5px" name="password" id="password" placeholder="Mot de passe" onkeyup="checkLength();return false;"/>
                 <br>
-                <span style="font-family:Open Sans;" id="LengthMessage" class="LengthMessage"></span>
+                <span id="LengthMessage" class="LengthMessage"></span>
                 <input type="password" style="margin-left:5px" name="confirmation" id="confirmation" onkeyup="checkPass();return false;" placeholder="Confirmer mot de passe"/>
                 <br>
-                <span style="font-family:Open Sans;" id="confirmMessage" class="confirmMessage"></span>
+                <span id="confirmMessage" class="confirmMessage"></span>
                 <button onClick="return verifform()">S'inscrire</button>
             </form>
         </body>
