@@ -401,6 +401,7 @@ select {
     background-size: 10%;
     background-position: center right;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 button {
@@ -465,7 +466,6 @@ hr {
 .details1 button {
 	width:150px;
     margin-bottom: 10px;
-    float:right;
     display: inline-block;
 }
 
@@ -483,4 +483,8 @@ hr {
 
 .photo .input {
     border: 0;
+}
+
+.ajout {
+    display: none;
 }

@@ -8,21 +8,75 @@
         <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
         <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script type="text/javascript">
+
+            function checkdate(input){
+                var validformat=/^\d{2}\/\d{2}\/\d{4}$/ //Basic check for format validity
+                var returnval=false
+                if (!validformat.test(input.value))
+                    alert("Format de date invalide!")
+                    else{ //Detailed check for valid date ranges
+                        var monthfield=input.value.split("/")[0]
+                        var dayfield=input.value.split("/")[1]
+                        var yearfield=input.value.split("/")[2]
+                        var dayobj = new Date(yearfield, monthfield-1, dayfield)
+                        if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
+                            alert("Jour, mois ou année invalide!")
+                            else
+                                returnval=true
+                        }
+                if (returnval==false) input.select()
+                return returnval
+            }
+
+        </script>
     </head>
-    <body style="margin: 20px;">
-        <div class="logo"></div>
+    <body>
+    <div class="wrapper clearfix">
+        <div class="right">
+
+        <div class="corps animated fadeInLeft">
         <div class="title">
             <p style="color:#8a0808;font-size:24px;text-align:center;"><strong>Ajouter une tâche</strong></p>
             <hr>
-          </div>
+        </div>
         <form>
             <label>Tâche</label>
             <input type="text" placeholder="tâche"/>
             <br/>
             <label>Date Limite</label>
-            <input type="date" placeholder="JJ/MM/AAAA"/>
+            <input type="date" name="date" placeholder="JJ/MM/AAAA"/>
             <br>
-            <button> Ajouter </button>
+            <button onClick="return checkdate(date)"> Ajouter </button>
         </form>
-    </body>
+        </div>
+        </div>
+        <div class="left">
+
+        <div class="presentation animated fadeIn">
+        <div class="logo"></div>
+        <div class="me-img"></div>
+
+          <div class="pres-text">
+
+            <h2>Loubna Rizqi</h2>
+            <hr>
+            <p>Etudiante en deuxième année à l'ENSEEIHT,  Toulouse, France.</p>
+            <p>21 ans <br>
+            <a style="color:#8a0808" href="../index/modifier-profil.html" onclick="return popitup('modifier-profil.html')">Modifier profil      </a> | <a style="color:#8a0808" href="/index.html">Se déconnecter</a></p>
+
+          </div>
+          <div class="button-container">
+                <ul class="boutons">
+                        <a href="../index/index.html"><li> Voir mes offres </li></a><br>
+                        <a href="../index/profil.html"><li> Modifier mon profil </li></a><br>
+                        <a href="../index/correspondances.html"><li> Voir mes correspondances </li></a><br>
+                        <a href="../index/cv.html"><li> Créer mon CV </li></a>
+                </ul>
+          </div>
+
+        </div>
+        </div>
+    </div>
+</body>
 </html>

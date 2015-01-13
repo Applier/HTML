@@ -25,6 +25,13 @@
 	               return false;
                 }
             // -->
+            function ajout(a)
+            {
+                if(a==2)
+                    document.getElementById("ajout").style.display="none";
+                else
+                    document.getElementById("ajout").style.display="block";
+            }
 	   </script>
 
     </head>
@@ -87,7 +94,17 @@
                         </tr>
                         </tbody>
                     </table>
-                        <a href="../index/ajouter.html" onclick="return popitup('ajouter.html')"><button>Ajouter une tâche</button></a>
+                        <a><button onClick="ajout(1)">Ajouter une tâche</button></a>
+                        <br>
+                        <div class="ajout" id="ajout">
+                        <label>Tâche</label>
+                        <input type="text" placeholder="tâche"/>
+                        <br>
+                        <label>Date Limite</label>
+                        <input type="date" name="date" placeholder="JJ/MM/AAAA"/>
+                        <br>
+                        <button onClick="ajout(2)">Envoyer</button>
+                        </div>
 
                     </p>
                 </tr>
@@ -131,7 +148,7 @@ Anglais lu, écrit
                         </tr>
                         </tbody>
                     </table>
-                        <a href="../index/ajouter.html" onclick="return popitup('ajouter.html')"><button>Ajouter une tâche</button></a>
+                        <a href="../index/ajouter.html"><button>Ajouter une tâche</button></a>
                     </p>
                 </tr>
                 <tr class="ligne" onclick="toggleSibling(this)">
@@ -175,12 +192,12 @@ en autonomie, en prêtant une attention particulière à la qualité du code.
                         </tr>
                         </tbody>
                     </table>
-                        <a href="../index/ajouter.html" onclick="return popitup('ajouter.html')"><button>Ajouter une tâche</button></a>
+                        <a href="../index/ajouter.html"><button>Ajouter une tâche</button></a>
                     </p>
                 </tr>
             </tbody>
            </table>
-            <a href="../index/offre.html" onclick="return popitup('offre.html')"><button>Ajouter une offre</button></a>    
+            <a href="../index/offre.html"><button>Ajouter une offre</button></a>    
         </div>
 
       </div>
@@ -201,10 +218,10 @@ en autonomie, en prêtant une attention particulière à la qualité du code.
           </div>
           <div class="button-container">
                 <ul class="boutons">
-                        <a href=""><li> Voir mes offres </li></a><br>
+                        <a href="../index/index.html"><li> Voir mes offres </li></a><br>
                         <a href="../index/profil.html"><li> Modifier mon profil </li></a><br>
                         <a href="../index/correspondances.html"><li> Voir mes correspondances </li></a><br>
-                        <a href=""><li> Créer mon CV </li></a>
+                        <a href="../index/cv.html"><li> Créer mon CV </li></a>
                 </ul>
           </div>
 
