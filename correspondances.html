@@ -25,6 +25,32 @@
 	               return false;
                 }
             // -->
+            function ajout(a)
+            {
+                if(a==2)
+                    document.getElementById("ajout").style.display="none";
+                else
+                    document.getElementById("ajout").style.display="block";
+            }
+            
+            function checkdate(input){
+                var validformat=/^\d{2}\/\d{2}\/\d{4}$/ //Basic check for format validity
+                var returnval=false
+                if (!validformat.test(input.value))
+                    alert("Format de date invalide!")
+                    else{ //Detailed check for valid date ranges
+                        var monthfield=input.value.split("/")[0]
+                        var dayfield=input.value.split("/")[1]
+                        var yearfield=input.value.split("/")[2]
+                        var dayobj = new Date(yearfield, monthfield-1, dayfield)
+                        if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
+                            alert("Jour, mois ou année invalide!")
+                            else
+                                returnval=true
+                        }
+                if (returnval==false) input.select()
+                return returnval
+            }
 	   </script>
 
     </head>
@@ -89,7 +115,21 @@
                         Cordialement,
                         <br>
                         H. M.</p>
-                        <a href="../index/ajouter.html"><button>Ajouter</button></a>
+                        <button onclick="ajout(1)">Ajouter</button>
+                        <div class="ajout" id="ajout">
+                        <label>Date d'envoi/réception</label>
+                        <input type="date" name="date" placeholder="JJ/MM/AAAA"/>
+                        <br>      
+                        <label>Expéditeur</label>
+                        <input type="text" placeholder="Prénom Nom"/>
+                        <br/>
+                        <br>
+                        <label>Contenu du message</label>
+                        <br>
+                        <textarea rows="10" cols="50" name="message"></textarea>
+                        <br>
+                        <button onClick="ajout(2)">Envoyer</button>
+                        </div>
                     
                 </tr>
                 <tr class="ligne" onclick="toggleSibling(this)">
