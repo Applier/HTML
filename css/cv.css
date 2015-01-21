@@ -56,20 +56,29 @@ h2 {
     margin-left : auto;
     margin-right: auto;
     margin-bottom : auto;
-    position:absolute;
     right:0;
     top:0;
     width:85%;
+    padding-bottom:65%;
 }
 
-.me-img {
-    background:url(../img/me.png) no-repeat center center ;
-    background-size:100%;
-    border-radius:100%;
-    height:80px;
-    width:80px;
-    margin:20px auto;
+.left span {
+    display: inline-block;
+    bottom: 0;
+    text-decoration: none;
+    font-family: Open Sans, sans-serif;
+    color: #333332;
+    font-size: 14px;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;
 }
+
+.left span:hover {
+    color: #8a0808;
+} 
 
 .logo {
     background:url(../img/logo.png) no-repeat center center ;
@@ -133,6 +142,7 @@ h2 {
     margin:0 auto;
     max-width:900px;
     padding:4em;
+    position: relative;
 }
 
 .corps a {
@@ -183,7 +193,7 @@ ul {
     font-family: Open Sans, sans-serif;
     display:inline-block;
     list-style:none;
-    margin:15px 15px 0 0;
+    margin:10px 15px 0 0;
     padding:7px;
     text-align:justify;
     -webkit-transition: all .4s ease-in;
@@ -206,11 +216,6 @@ ul {
 .boutons li:hover {
     background:#8a0808;
     color: #fff;
-    -webkit-transition: all .4s ease-in;
-    -moz-transition: all .4s ease-in;
-    -ms-transition: all .4s ease-in;
-    -o-transition: all .4s ease-in;
-    transition: all .4s ease-in;
 }
 
 @media screen and (max-width: 769px) {
@@ -401,6 +406,7 @@ select {
     background-size: 10%;
     background-position: center right;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 button {
@@ -429,13 +435,213 @@ button:hover {
 
 
 
+.details1 {
+    display: none;
+}
+
+.details1 p {
+    color: grey
+    text-align:center;
+    margin-top: 5px;
+}
+
+.details1 h2 {
+    color: #8a0808;
+    font-size : 18px;
+    font-weight: 800;
+    margin: 5px;
+}
+
 hr {
     border : 0;
     background-color : #8a0808;
     color : #8a0808;
-    height : 1px;
-    width : 55px;
+    height : 3px;
+    width : 50px;
 }
+
+.taches {
+    margin-top:10px;
+}
+
+.taches td {
+    color: #8a0808;
+}
+
+.details1 button {
+	width:150px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.photo {
+    background:url(../img/me.png) no-repeat center center ;
+    background-size:100%;
+    border-radius:100%;
+    height:80px;
+    width:80px;
+    margin:15px auto;
+}
+
+.ajout {
+    display: none;
+}
+
+.area {
+    border:1px solid #9e9e9e;
+	border-radius:2px;
+	font-size:12px;
+	letter-spacing:2px;
+    padding: 10px;
+	outline:none;
+	color:#9e9e9e;
+	margin-top:20px;
+    margin-right: 10px;
+}
+
+.area:hover {
+	border:1px solid #8a0808;
+	color:#8a0808;
+}
+
+.area:focus {
+	border:1px solid #8a0808;
+}
+
+.supprimer {
+    visibility: hidden;
+}
+
+.modifier {
+    visibility: hidden;
+}
+
+.ligne:hover .supprimer
+{
+	visibility : visible;
+}
+
+.ligne:hover .modifier
+{
+	visibility : visible;
+}
+
+.contact {
+    background:url(../img/contact.png) no-repeat center center ;
+    background-size:100%;
+    height:200px;
+    width:300px;
+    margin:auto;
+}
+
+.apropos {
+    background:url(../img/apropos.png) no-repeat center center ;
+    background-size:100%;
+    height:150px;
+    width:120px;
+    margin:auto;
+}
+
+.equipe {
+    display :block;
+    margin: 2% 5% 5% 10%;
+}
+
+.membre h2 {
+    font-size: 18px;
+    margin: 25px auto;
+    width : 100px;
+    display: none;
+    text-align: center;
+    font-weight: 800;
+    color: white;
+}
+
+.membre:hover h2 {
+    display: block;
+}
+
+.loubna:hover {
+    background: #8a0808;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;   
+}
+
+.loubna {
+    background:url(../img/photo1.png) no-repeat center center ;
+    background-size:100%;
+    border-radius:100%;
+    height:100px;
+    width:100px;
+    margin:15px;
+    float:left;   
+}
+
+.maxime {
+    background:url(../img/maxime.png) no-repeat center center ;
+    background-size:100%;
+    border-radius:100%;
+    height:100px;
+    width:100px;
+    margin:15px;
+    float:left;
+}
+
+.maxime:hover {
+    background: #8a0808;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;   
+}
+
+.anthony {
+    background:url(../img/anthony.png) no-repeat center center ;
+    background-size:100%;
+    border-radius:100%;
+    height:100px;
+    width:100px;
+    margin:15px;
+    float:left;
+}
+
+.anthony:hover {
+    background: #8a0808;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;   
+}
+
+.jade {
+    background:url(../img/jade.png) no-repeat center center ;
+    background-size:100%;
+    border-radius:100%;
+    height:100px;
+    width:100px;
+    margin:15px;
+    float:left;
+}
+
+.jade:hover {
+    background: #8a0808;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;   
+}
+
+.liens {
+    display:block;
+    margin-left:35%;
+}
+
 
 
 .template1 {
@@ -541,25 +747,6 @@ hr {
     display: inline-block;
     margin-left: 10px;
     padding:0;
-}
-
-.left span {
-    position: absolute;
-    bottom: 0;
-    margin-left: 45%;
-    text-decoration: none;
-    font-family: Open Sans, sans-serif;
-    color: #333332;
-    font-size: 14px;
-    -webkit-transition: all .4s ease-in;
-    -moz-transition: all .4s ease-in;
-    -ms-transition: all .4s ease-in;
-    -o-transition: all .4s ease-in;
-    transition: all .4s ease-in;
-}
-
-.left span:hover {
-    color: #f67d70;
 }
 
 .photo {
