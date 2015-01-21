@@ -134,13 +134,11 @@ input:-moz-placeholder {
 
 
 span {
- color:#cd5151;
- font-size:12px;
- letter-spacing:2px;
- margin-top:20px;
- font-family: Arial, sans-serif;
+	font-size:12px;
+	letter-spacing:2px;
+	margin-top:20px;
+    font-family: Arial, sans-serif;
 }
-
 
 
 

@@ -50,8 +50,10 @@
             <label>Date Limite</label>
             <input type="date" name="date" placeholder="JJ/MM/AAAA"/>
             <br>
+            <br>
             <label>Résumé de l'offre</label>
-            <input style="width:250px;" type="text" placeholder="Résumé"/>
+            <br>
+            <textarea class="area" rows="10" cols="50" name="message"></textarea>
             <br>
             <button onClick="return checkdate(date)"> Ajouter </button>
         </form>
@@ -61,7 +63,7 @@
 
         <div class="presentation animated fadeIn">
         <div class="logo"></div>
-        <div class="me-img"></div>
+        <div class="photo"></div>
 
           <div class="pres-text">
 
@@ -69,7 +71,7 @@
             <hr>
             <p>Etudiante en deuxième année à l'ENSEEIHT,  Toulouse, France.</p>
             <p>21 ans <br>
-            <a style="color:#8a0808" href="../index/modifier-profil.html" onclick="return popitup('modifier-profil.html')">Modifier profil      </a> | <a style="color:#8a0808" href="/index.html">Se déconnecter</a></p>
+            <a style="color:#8a0808" href="../index/modifier-compte.html">Modifier compte     </a> | <a style="color:#8a0808" href="/index.html">Se déconnecter</a></p>
 
           </div>
           <div class="button-container">
@@ -82,6 +84,7 @@
           </div>
 
         </div>
+            <a href="../index/contact.html"><span>Contact</span></a>
         </div>
     </div>
 </body>

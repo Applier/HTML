@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modifier mon compte</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Loubna Rizqi">
+        <link rel='stylesheet' type='text/css' href='css/style.css'/>
+        <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
+        <link rel="stylesheet" type="text/css" href="css/animate-custom.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script type="text/javascript">
+            function checkPass()
+            {
+                //On enregistre les deux mots de passes ...
+                var password = document.getElementById('password');
+                var confirmation = document.getElementById('confirmation');
+                //On enregistre le message à afficher...
+                var message = document.getElementById('confirmMessage');
+                //On enregistre les couleurs pour les deux cas...
+                var goodColor = "#7dcd51";
+                var badColor = "#cd5151";
+                //Comparer les deux mots de passe
+                if(password.value == confirmation.value){
+                //Ils sont identiques 
+                //Afficher le rouge et notifier l'utilisateur
+                confirmation.style.backgroundColor = goodColor;
+                message.style.color = goodColor;
+                message.innerHTML = "Mots de passe identiques."
+                }else{
+                //Les mots de passes sont différents
+                //Afficher le vert et notifier l'utilisateur
+                confirmation.style.backgroundColor = badColor;
+                message.style.color = badColor;
+                message.innerHTML = "Mots de passes différents!"
+                }
+            }
+            function checkLength()
+            {
+                //On enregistre le mot de passe...
+                var password = document.getElementById('password');
+                //On enregistre le message à afficher...
+                var message1 = document.getElementById('LengthMessage');
+                var message2 = document.getElementById('confirmMessage');
+                //On enregistre les couleurs pour les deux cas...
+                var goodColor = "#7dcd51";
+                var badColor = "#cd5151";
+                //Compare the values in the password field 
+                //and the confirmation field
+                if(password.value.length >= 5){
+                //Le mot de passe est valide
+                password.style.backgroundColor = goodColor;
+                message1.style.color = goodColor;
+                message1.innerHTML = "Mot de passe valide."
+                }else{
+                //Le mot de passe est trop court
+                password.style.backgroundColor = badColor;
+                message1.style.color = badColor;
+                message1.innerHTML = "Le mot de passe doit avoir au moins 5 caractères!"
+                }
+                if(password.value == confirmation.value){
+                //Ils sont identiques 
+                //Afficher le rouge et notifier l'utilisateur
+                confirmation.style.backgroundColor = goodColor;
+                message2.style.color = goodColor;
+                message2.innerHTML = "Mots de passe identiques."
+                }else{
+                //Les mots de passes sont différents
+                //Afficher le vert et notifier l'utilisateur
+                confirmation.style.backgroundColor = badColor;
+                message2.style.color = badColor;
+                message2.innerHTML = "Mots de passes différents!"
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <div class="wrapper clearfix">
+        <div class="right">
+        <div class="corps animated fadeInLeft">
+                <div class="title">
+            <p style="color:#8a0808;font-size:24px;text-align:center;"><strong>Modifier mon compte</strong></p>
+            <hr>
+          </div>
+            <form name="formulaire">
+                <label>Ancien mot de passe</label>
+                <input type="password" placeholder="mot de passe"/>
+                <br>
+                <label>Nouveau mot de passe</label>
+                <input type="password" style="margin-left:5px" name="password" id="password" placeholder="Mot de passe" onkeyup="checkLength();return false;"/>
+                <br>
+                <label>Confirmation</label>
+                <input type="password" style="margin-left:5px" name="confirmation" id="confirmation" onkeyup="checkPass();return false;" placeholder="Confirmation"/>
+            </form>
+        <button> Mettre à jour </button>
+        </div>
+        </div>
+        <div class="left">
+
+        <div class="presentation animated fadeIn">
+        <div class="logo"></div>
+        <div class="photo"></div>
+
+          <div class="pres-text">
+
+            <h2>Loubna Rizqi</h2>
+            <hr>
+            <p>Etudiante en deuxième année à l'ENSEEIHT,  Toulouse, France.</p>
+            <p>21 ans <br>
+            <a style="color:#8a0808" href="../index/modifier-compte.html">Modifier compte     </a> | <a style="color:#8a0808" href="/index.html">Se déconnecter</a></p>
+
+          </div>
+          <div class="button-container">
+                <ul class="boutons">
+                        <a href="../index/index.html"><li> Voir mes offres </li></a><br>
+                        <a href="../index/profil.html"><li> Modifier mon profil </li></a><br>
+                        <a href="../index/correspondances.html"><li> Voir mes correspondances </li></a><br>
+                        <a href="../index/cv.html"><li> Créer mon CV </li></a>
+                </ul>
+          </div>
+
+        </div>
+            <a href="../index/contact.html"><span>Contact</span></a>
+        </div>
+    </div>
+    </body>
+</html>

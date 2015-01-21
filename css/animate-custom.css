@@ -23,6 +23,7 @@
 	-o-animation-name: fadeIn;
 	animation-name: fadeIn;
 }
+
 @-webkit-keyframes fadeInUp {
 	0% {
 		opacity: 0;
