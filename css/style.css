@@ -434,6 +434,21 @@ button:hover {
 }
 
 
+.bin {
+	width:40px;
+	background:#8a0808;
+	border-radius:2px;
+	padding-top:5px;
+	font-size:14px;
+	color:#fff;
+	border:0;
+	text-shadow:0 2px 0 #690707;
+	filter:dropshadow(color=#690707,offx=0,offy=2);
+	font-weight: bold;
+    font-family: Open Sans, sans-serif;
+    box-shadow:0 0;
+    margin:0;
+}
 
 .details1 {
     display: none;
@@ -640,4 +655,9 @@ hr {
 .liens {
     display:block;
     margin-left:35%;
+}
+
+.supprimer button {
+    width: 50;
+    height: 50;
 }
